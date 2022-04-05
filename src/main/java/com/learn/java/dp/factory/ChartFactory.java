@@ -8,6 +8,12 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 public class ChartFactory {
+    /**
+     * 根据参数类型创建并返回对象实例，违背开闭原则
+     *
+     * @param type
+     * @return
+     */
     public static Chart getChart(String type) {
         if ("histogram".equals(type)) {
             return new HistogramChart();
